@@ -1,4 +1,4 @@
-import { ResponseUsers } from './user.model';
+import { ResponseCreate, ResponseUsers, RequestCreate } from './user.model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
@@ -14,5 +14,9 @@ export class UserService {
 
   getUsers(): Observable<ResponseUsers>{
     return this.http.get<ResponseUsers>(this.url);
+  }
+
+  createUser(request: RequestCreate): Observable<ResponseCreate>{
+    return this.http.post<ResponseCreate>(this.url, request)
   }
 }
