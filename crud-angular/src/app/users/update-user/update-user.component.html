@@ -1,0 +1,14 @@
+<div *ngIf="request">
+  <h2>Atualizar usuário</h2>
+  <div>
+    <label>Nome:</label>
+    <input placeholder="Insira o nome" [(ngModel)]="request.name">
+  </div>
+  <br><br>
+  <div>
+    <label>Profissão:</label>
+    <input placeholder="Insira a profissão" [(ngModel)]="request.job">
+  </div>
+  <br>
+  <button (click)="update()">Gravar</button>
+</div>
