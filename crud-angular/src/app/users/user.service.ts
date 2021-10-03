@@ -23,12 +23,18 @@ export class UserService {
   getUser(id: string | null): Observable<ResponseUser>{
     const _url = `${this.url}/${id}`;
 
-    return this.http.get<ResponseUser>(this.url);
+    return this.http.get<ResponseUser>(_url);
   }
 
   updateUser(id: string | null, request: RequestUpdate): Observable<ResponseUpdate>{
     const _url =`${this.url}/${id}`;
 
-    return this.http.put<ResponseUpdate>(this.url, request);
+    return this.http.put<ResponseUpdate>(_url, request);
+  }
+
+  deleteUser(id: string | null): Observable<any>{
+    const _url = `${this.url}/${id}`;
+
+    return this.http.delete<any>(_url);
   }
 }

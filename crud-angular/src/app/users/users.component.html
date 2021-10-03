@@ -3,12 +3,14 @@
     <td>Nome</td>
     <td>Sobrenome</td>
     <td>Update</td>
+    <td>Remove</td>
   </thead>
   <tbody>
     <tr *ngFor="let user of responseUsers.data">
       <td>{{ user.first_name }}</td>
       <td>{{ user.last_name }}</td>
       <td><a routerLink="/users/update/{{user.id}}">Editar</a></td>
+      <td><a routerLink="/users/delete/{{user.id}}">Remover</a></td>
     </tr>
   </tbody>
 </table>

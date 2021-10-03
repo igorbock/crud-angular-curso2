@@ -6,6 +6,7 @@ export interface User {
   avatar: string;
 }
 
+//Model READ
 export interface ResponseUsers {
   page: number;
   per_page: number;
@@ -13,6 +14,7 @@ export interface ResponseUsers {
   total_pages: number;
   data: User[];
 }
+
 //Models para o CREATE
 export interface RequestCreate {
   name: string;
@@ -24,7 +26,6 @@ export interface ResponseCreate {
   id: string;
   createdAt: Date;
 }
-
 
 //Models para o UPDATE
 export interface ResponseUser{
